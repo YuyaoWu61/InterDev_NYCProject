@@ -14,6 +14,13 @@ public class spawner : MonoBehaviour
     void Start()
     {
         // GameObject berry = GameObject.Find("wildberry");
+        for(int i=0; i<20; i++){
+            float spawnY = Random.Range(-10, -5);
+            float spawnX = Random.Range(-25, 20);
+            Vector2 spawnPos = new Vector2(spawnX, spawnY);
+            GameObject.Instantiate(berry, spawnPos, Quaternion.identity);
+        }
+        
     }
 
    
@@ -22,7 +29,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
         // if(spawn){
-        //     SpawnBerry(wildberry);
+        //     SpawnBerry(berry);
         //     spawn = false;
         // }
  
@@ -38,15 +45,15 @@ public class spawner : MonoBehaviour
         //     }
         // }
     } 
-    public void SpawnBerry(GameObject berry){
+    public void SpawnBerry(){
         
         float spawnY = Random.Range(-10, -5);
         float spawnX = Random.Range(-25, 20);
         Vector2 spawnPos = new Vector2(spawnX, spawnY);
         // GameObject wildberry = GameObject.Find("wildberry");
         // GameObject newBerry = GameObject.Instantiate(berry, spawnPos, Quaternion.identity);
-        
         // Instantiate(berry, spawnPos, Quaternion.identity);
-        Instantiate(Resources.Load("YOURPATH", typeof(GameObject)));
+        GameObject.Instantiate(berry, spawnPos, Quaternion.identity);
+        // Instantiate(Resources.Load("YOURPATH", typeof(GameObject)));
     }
 }

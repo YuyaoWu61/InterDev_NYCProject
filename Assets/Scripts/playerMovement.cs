@@ -40,9 +40,10 @@ public class playerMovement : MonoBehaviour
             Debug.Log("berryget!!!!");
             
             // spawner.spawn = true;
-            // spawner.SpawnBerry(berry);
+            
             scoreManager.addBerry(scoreModifier);
             Destroy(collision.gameObject);
+            spawner.SpawnBerry();
         }
         if(collision.gameObject.tag == "bird"){
             Debug.Log("bird!");
