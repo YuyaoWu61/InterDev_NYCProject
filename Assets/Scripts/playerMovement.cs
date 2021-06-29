@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
@@ -8,26 +10,52 @@ public class playerMovement : MonoBehaviour
     public bool isGrounded;
     public Rigidbody2D playerRB;
     
+    public scoreManager scoreManager;
+    public spawner spawner;
+    public GameObject berry;
+    public int scoreModifier;
+    
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         isGrounded = true;
+        scoreModifier = 1;
+        scoreManager = GetComponent<scoreManager>();
     }
-
+    void Update()
+        {
+            // GameObject wildberry = GameObject.Find("wildberry");
+        }
+        
    void OnTriggerEnter2D(Collider2D collision){
-        // if(collision.gameObject.tag == "ground"){
-        //     Debug.Log("!!!");
-        //     isGrounded = true;
-        // }
+        if(collision.gameObject.tag == "ground"){
+            Debug.Log("!!!");
+            isGrounded = true;
+        }
         if(collision.gameObject.tag == "sky"){
             isGrounded = false;
+        }
+        if(collision.gameObject.tag == "wildberry"){
+            Debug.Log("berryget!!!!");
+            
+            // spawner.spawn = true;
+            // spawner.SpawnBerry(berry);
+            scoreManager.addBerry(scoreModifier);
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.tag == "bird"){
+            Debug.Log("bird!");
+            if(scoreManager.currentBerry >= 5){
+                Destroy(collision.gameObject);
+                scoreManager.currentBerry -= 5;
+            }
         }
     }
 
     void OnTriggerStay2D(Collider2D collision){
         if(collision.gameObject.name == "ground"){
-            Debug.Log("isgrounded");
+           
             isGrounded = true;
         }
     }
@@ -36,15 +64,8 @@ public class playerMovement : MonoBehaviour
         if(collision.gameObject.tag == "ground"){
             isGrounded = false;
         }
-        
-
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 
     void FixedUpdate(){
      

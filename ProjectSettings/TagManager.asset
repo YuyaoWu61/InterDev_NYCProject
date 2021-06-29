@@ -6,6 +6,8 @@ TagManager:
   tags:
   - sky
   - ground
+  - wildberry
+  - bird
   layers:
   - Default
   - TransparentFX
