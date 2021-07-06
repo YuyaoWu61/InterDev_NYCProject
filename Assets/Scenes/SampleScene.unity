@@ -5728,6 +5728,22 @@ MonoBehaviour:
   scoreText: {fileID: 1348961973}
   currentBerry: 0
   scoreModifier: 0
+--- !u!114 &844751616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844751608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13ce5d14478e5042afd06cc43a310cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  berryCount: 0
+  timer: 3
+  berry: {fileID: 4420616714550560306, guid: 69c67cf58574e4b4f965dd7d6baaf3f6, type: 3}
+  spawn: 0
 --- !u!1 &893221203
 GameObject:
   m_ObjectHideFlags: 0
