@@ -4228,7 +4228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 976745696648049721, guid: 70ae6e35c1142aa42860f45aa09833ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.603352
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 976745696648049721, guid: 70ae6e35c1142aa42860f45aa09833ce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5552,7 +5552,6 @@ GameObject:
   - component: {fileID: 844751611}
   - component: {fileID: 844751610}
   - component: {fileID: 844751609}
-  - component: {fileID: 844751616}
   - component: {fileID: 844751615}
   - component: {fileID: 844751612}
   - component: {fileID: 844751613}
@@ -5664,7 +5663,7 @@ MonoBehaviour:
   isGrounded: 1
   playerRB: {fileID: 0}
   scoreManager: {fileID: 0}
-  spawner: {fileID: 0}
+  spawner: {fileID: 651560064}
   berry: {fileID: 0}
   scoreModifier: 0
 --- !u!61 &844751613
@@ -5729,22 +5728,6 @@ MonoBehaviour:
   scoreText: {fileID: 1348961973}
   currentBerry: 0
   scoreModifier: 0
---- !u!114 &844751616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844751608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13ce5d14478e5042afd06cc43a310cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  berryCount: 0
-  timer: 3
-  berry: {fileID: 4420616714550560306, guid: 69c67cf58574e4b4f965dd7d6baaf3f6, type: 3}
-  spawn: 0
 --- !u!1 &893221203
 GameObject:
   m_ObjectHideFlags: 0
@@ -12591,7 +12574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220467559466872868, guid: b043935eb833f014bbc3058269dd3717, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 3220467559466872868, guid: b043935eb833f014bbc3058269dd3717, type: 3}
       propertyPath: m_LocalPosition.z

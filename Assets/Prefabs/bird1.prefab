@@ -421,7 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2678139829421068688}
   - component: {fileID: 6134815896610174904}
-  - component: {fileID: 7178309837177011247}
+  - component: {fileID: 5124462877119748281}
   m_Layer: 0
   m_Name: neck (2)
   m_TagString: bird
@@ -494,7 +494,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7178309837177011247
+--- !u!61 &5124462877119748281
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -504,10 +504,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.320318, y: -0.8247454}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -518,7 +518,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 24.691917, y: 3.6494908}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &7058657812651274940
 GameObject:
