@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     public bool isGrounded;
     public Rigidbody2D playerRB;
     public AudioSource coin;
+    public AudioSource bird;
     public scoreManager scoreManager;
     public spawner spawner;
     public GameObject berry;
@@ -23,6 +24,7 @@ public class playerMovement : MonoBehaviour
         scoreModifier = 1;
         scoreManager = GetComponent<scoreManager>();
         coin = GameObject.FindGameObjectWithTag("wildberry").GetComponent<AudioSource>();
+        bird = GameObject.FindGameObjectWithTag("control").GetComponent<AudioSource>();
     }
     void Update()
         {
@@ -44,6 +46,8 @@ public class playerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "bird"){
             if(scoreManager.currentBerry >= 5){
+                // bird = collision.gameObject.GetComponent<AudioSource>();
+                bird.Play();
                 Destroy(collision.gameObject);
                 scoreManager.currentBerry -= 5;
                 scoreManager.currentBirds += 1;

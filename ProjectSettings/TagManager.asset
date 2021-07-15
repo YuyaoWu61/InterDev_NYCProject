@@ -9,6 +9,7 @@ TagManager:
   - wildberry
   - bird
   - star
+  - control
   layers:
   - Default
   - TransparentFX

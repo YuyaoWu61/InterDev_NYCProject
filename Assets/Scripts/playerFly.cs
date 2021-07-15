@@ -8,11 +8,12 @@ public class playerFly : MonoBehaviour
     public scoreManager scoreManager;
     public int scoreModifier = 1;
     public AudioSource meteor;
+    public AudioSource crash;
 
     // Start is called before the first frame update
     void Start()
     {
-        // meteor = GameObject.FindGameObjectWithTag("star").GetComponent<AudioSource>();
+        crash = GameObject.FindGameObjectWithTag("control").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class playerFly : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "star"){
-            // meteor.Play();
+            crash.Play();
             Destroy(collision.gameObject);
             scoreManager.changeScore(1);
             GetComponent<Animator>().Play("playerhit");
