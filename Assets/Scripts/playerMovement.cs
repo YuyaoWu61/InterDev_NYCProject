@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
     public float movementSpeed = 1f;
     public bool isGrounded;
     public Rigidbody2D playerRB;
-    
+    public AudioSource coin;
     public scoreManager scoreManager;
     public spawner spawner;
     public GameObject berry;
@@ -22,6 +22,7 @@ public class playerMovement : MonoBehaviour
         isGrounded = true;
         scoreModifier = 1;
         scoreManager = GetComponent<scoreManager>();
+        coin = GameObject.FindGameObjectWithTag("wildberry").GetComponent<AudioSource>();
     }
     void Update()
         {
@@ -30,33 +31,28 @@ public class playerMovement : MonoBehaviour
         
    void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "ground"){
-            Debug.Log("!!!");
             isGrounded = true;
         }
         if(collision.gameObject.tag == "sky"){
             isGrounded = false;
         }
         if(collision.gameObject.tag == "wildberry"){
-            Debug.Log("berryget!!!!");
-            
-            // spawner.spawn = true;
-            
             scoreManager.addBerry(scoreModifier);
+            coin.Play();
             Destroy(collision.gameObject);
             spawner.SpawnBerry();
         }
         if(collision.gameObject.tag == "bird"){
-            Debug.Log("bird!");
             if(scoreManager.currentBerry >= 5){
                 Destroy(collision.gameObject);
                 scoreManager.currentBerry -= 5;
+                scoreManager.currentBirds += 1;
             }
         }
     }
 
     void OnTriggerStay2D(Collider2D collision){
         if(collision.gameObject.name == "ground"){
-           
             isGrounded = true;
         }
     }

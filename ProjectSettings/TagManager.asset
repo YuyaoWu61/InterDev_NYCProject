@@ -8,6 +8,7 @@ TagManager:
   - ground
   - wildberry
   - bird
+  - star
   layers:
   - Default
   - TransparentFX
